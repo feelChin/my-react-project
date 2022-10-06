@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3593330 */
+  src: url('iconfont.eot?t=1660797690766'); /* IE9 */
+  src: url('iconfont.eot?t=1660797690766#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('iconfont.woff2?t=1660797690766') format('woff2'),
+       url('iconfont.woff?t=1660797690766') format('woff'),
+       url('iconfont.ttf?t=1660797690766') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zhanghaoquanxianguanli:before {
+  content: "\eb68";
+}
+
+.icon-qianming:before {
+  content: "\e69f";
+}
+
+.icon-7:before {
+  content: "\e606";
+}
+
+.icon-nianling:before {
+  content: "\e673";
+}
+
+.icon-didianPlaces12:before {
+  content: "\e6be";
+}
+
+.icon-sousuo1:before {
+  content: "\eafe";
+}
+
+.icon-jiantou-copy-copy:before {
+  content: "\e654";
+}
+
+.icon-jiantou:before {
+  content: "\e64e";
+}
+
+.icon-jiantou-copy:before {
+  content: "\e652";
+}
+
+.icon-jiantou-copy-copy1:before {
+  content: "\e653";
+}
+
+.icon-cuowu:before {
+  content: "\e600";
+}
+

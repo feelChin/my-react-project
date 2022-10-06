@@ -1,0 +1,40 @@
+.theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw 5%;
+
+    .themeTitle {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 5vw;
+            height: 5vw;
+            margin-right: 3vw;
+        }
+    }
+
+    .themeMenuWrapper {
+        position: relative;
+        background: var(--theme-gray9);
+        width: 12vw;
+        height: 5vw;
+        border-radius: 5vw;
+
+        .themeMenu {
+            position: absolute;
+            top: 0.25vw;
+            left: 0.25vw;
+            width: 4.5vw;
+            height: 4.5vw;
+            border-radius: 50%;
+            background: var(--theme-white);
+            transition: .5s;
+
+            &:global(.active) {
+                left: calc(100% - 0.25vw - 4.5vw);
+            }
+        }
+    }
+}

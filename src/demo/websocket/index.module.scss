@@ -1,0 +1,29 @@
+@import "../../styles/util.scss";
+
+.websocket {
+  background: var(--theme-white);
+  color: var(--theme-gray9);
+  padding: 0 5vw;
+  .websocketWrapper {
+    max-height: 80vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    .item {
+      padding: 5vw 0;
+    }
+  }
+  .buttonFlex {
+    position: fixed;
+    bottom: 5vw;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    :global(button) {
+      padding: 2vw 3vw;
+      background: var(--vanilla);
+      color: var(--white);
+    }
+  }
+}

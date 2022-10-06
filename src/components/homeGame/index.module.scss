@@ -1,0 +1,197 @@
+@import "../../styles/util.scss";
+
+.homeGame {
+  position: relative;
+  padding: 0 5%;
+
+  .history {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3vw 0;
+    .historyItem {
+      width: 50%;
+      padding: 0.5vw 0;
+      font-size: 3.7333vw;
+      color: var(--theme-gray6);
+      transition: 0.4s;
+      &:global(.active) {
+        color: var(--red);
+      }
+    }
+    .historyMenu {
+      margin-top: 3vw;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      button {
+        width: 48%;
+        padding: 3vw;
+        color: var(--white);
+        &:nth-child(1) {
+          background: var(--vanilla);
+        }
+        &:nth-child(2) {
+          background: var(--red);
+        }
+      }
+    }
+  }
+  .winner {
+    @include fixed;
+    background: rgba(0, 0, 0, 0.5);
+    @include flex;
+
+    .winnerText {
+      width: 90%;
+      font-size: 5vw;
+      background: var(--theme-light6);
+      text-align: center;
+      color: var(--theme-black);
+
+      header {
+        padding: 5vw 0;
+        font-weight: 700;
+      }
+
+      footer {
+        padding: 5vw 0;
+      }
+
+      .userInfo {
+        padding: 3vw 0;
+
+        .userAvatar {
+          width: 13vw;
+          height: 13vw;
+          margin: 0 auto;
+        }
+
+        .userName {
+          margin-top: 3vw;
+        }
+      }
+
+      .winnerList {
+        display: flex;
+
+        button {
+          width: 50%;
+          padding: 3vw;
+          font-size: 4vw;
+          color: var(--white);
+
+          &:nth-child(1) {
+            background: var(--red);
+          }
+
+          &:nth-child(2) {
+            background: var(--vanilla);
+          }
+        }
+      }
+    }
+  }
+
+  .user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5vw;
+    margin-bottom: 5vw;
+    position: relative;
+    h5 {
+      @include transformMarginLeft;
+      color: var(--theme-black);
+      b {
+        font-size: 14vw;
+      }
+      small {
+        font-size: 12vw;
+      }
+    }
+    .userItem {
+      .userAvatar {
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .userName {
+        text-align: center;
+        font-size: 4vw;
+        margin-top: 2vw;
+        color: var(--theme-black);
+      }
+    }
+  }
+
+  .homeGameWrapper {
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+    position: relative;
+
+    .homeGameBox {
+      display: flex;
+      flex-wrap: wrap;
+      @include absolute;
+
+      .square {
+        overflow: hidden;
+        width: 33.33%;
+        height: 0%;
+        padding-top: 33.33%;
+        position: relative;
+        &:nth-child(3n) {
+          button {
+            border-right-color: var(--theme-black);
+          }
+        }
+        &:nth-child(3n + 1):nth-last-child(-n + 3),
+        &:nth-child(3n + 1):nth-last-child(-n + 3) ~ .square {
+          button {
+            border-bottom-color: var(--theme-black);
+          }
+        }
+        button {
+          border: 2px solid transparent;
+          border-top-color: var(--theme-black);
+          border-left-color: var(--theme-black);
+          @include absolute;
+          background: var(--theme-light6);
+          font-size: 15vw;
+
+          section {
+            @include absolute;
+          }
+          .delete {
+            transform: rotate(45deg);
+            &:after,
+            &:before {
+              content: "";
+              @include transformMargin;
+              width: 60%;
+              height: 2vw;
+              background: var(--theme-black);
+            }
+            &:before {
+              transform: translate(-50%, -50%) rotate(90deg);
+            }
+          }
+          .round {
+            @include absolute;
+            border-radius: 50%;
+            border: 2.5vw solid var(--theme-black);
+            transform: scale(0.6);
+          }
+        }
+
+        .showWinner {
+          background: var(--vanilla);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../styles/util.scss";
+
+.head {
+  position: sticky;
+  top: 0;
+  background: var(--vanilla);
+  color: var(--white);
+  height: 13.333vw;
+  @include flex;
+  z-index: 9;
+
+  i {
+    @include transformMarginTop;
+    left: 5%;
+    font-size: 5vw;
+  }
+}

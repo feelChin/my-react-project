@@ -1,0 +1,48 @@
+@import "../../styles/util.scss";
+
+.messageWrapper {
+  padding: 5% 5vw;
+  background: var(--theme-light3);
+  color: var(--theme-black);
+  .items {
+    @include flexwrap;
+    .item {
+      width: 48%;
+      padding: 3vw;
+      background: var(--theme-white);
+      @include flex;
+      margin-bottom: 5vw;
+    }
+  }
+}
+
+.custom {
+  position: relative;
+  text-align: left;
+  .closeMessage {
+    position: absolute;
+    right: 0;
+    width: 5vw;
+    height: 5vw;
+    pointer-events: auto;
+    transform: rotate(45deg);
+    &:after,
+    &:before {
+      content: "";
+      width: 80%;
+      height: 1px;
+      background: var(--theme-gray9);
+      @include transformMargin;
+    }
+    &:before {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+  .head {
+    border-bottom: 1px solid var(--theme-light3);
+    padding-bottom: 1vw;
+  }
+  .text {
+    padding-top: 1vw;
+  }
+}

@@ -1,0 +1,103 @@
+@import "../../styles/util.scss";
+
+.plateKeyboardWrapper {
+  position: relative;
+  background: var(--theme-white);
+  height: 100%;
+
+  .plateKeyboardWrapperOnclick {
+    @include absolute;
+  }
+
+  .plateKeyboardWrapperBox {
+    position: relative;
+    pointer-events: none;
+    padding-top: 30vw;
+
+    button {
+      font-size: 5vw;
+      width: 80vw;
+      margin: 15vw 0 0 10vw;
+      padding: 3vw;
+      color: var(--theme-light3);
+      pointer-events: auto;
+
+      &.active {
+        background: var(--vanilla);
+        color: var(--white);
+      }
+    }
+
+    .keyInputListWrapper {
+      pointer-events: auto;
+
+      display: flex;
+      justify-content: center;
+
+      .keyInputList {
+        display: flex;
+        border: 1px solid var(--theme-light3);
+
+        .name {
+          color: var(--red);
+        }
+
+        li {
+          font-size: 5vw;
+          width: 10vw;
+          height: 10vw;
+          border-right: 1px solid var(--theme-light3);
+          @include flex;
+          color: var(--theme-black);
+
+          span {
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes keyBoard {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  .keyBoard {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--theme-light3);
+    padding: 3vw 1vw;
+    z-index: 999;
+    animation: keyBoard 0.3s forwards;
+
+    .keyBoardList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .item {
+        width: 10vw;
+        height: 10vw;
+        margin: 1vw;
+        @include flex;
+        color: var(--theme-gray6);
+        background: var(--theme-white);
+        border-radius: 1.067vw;
+
+        &.special {
+          width: 8vw;
+          height: 8vw;
+          margin: 1vw 0.9vw;
+        }
+      }
+    }
+  }
+}

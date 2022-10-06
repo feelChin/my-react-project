@@ -1,0 +1,54 @@
+@import "../../styles/util.scss";
+
+.portal {
+  background: var(--theme-white);
+  button {
+    background: var(--vanilla);
+    color: var(--white);
+    padding: 3vw 5vw;
+    @include transformMargin;
+  }
+}
+
+.portalWrapper {
+  @include fixed;
+  @include flex;
+  z-index: 9;
+  @keyframes portalAnimate {
+    0% {
+      transform: translateY(10%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes portalInnerAnimate {
+    0% {
+      transform: translateY(80%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .portalBack {
+    @include absolute;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    z-index: -1;
+    animation: portalAnimate 0.3s ease-in-out forwards;
+  }
+  .portalInner {
+    background: var(--theme-white);
+    opacity: 0;
+    animation: portalInnerAnimate 0.4s ease-in-out forwards;
+    header {
+      padding: 3vw;
+    }
+  }
+}

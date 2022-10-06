@@ -1,0 +1,17 @@
+.pageItem {
+  background: var(--theme-light3);
+  padding: 5vw 5%;
+}
+
+.item {
+  height: 10vw;
+  padding: 0 3vw;
+  display: flex;
+  align-items: center;
+  background: var(--theme-white);
+  margin-bottom: 3vw;
+  color: var(--theme-black);
+  span {
+    color: var(--theme-gray9);
+  }
+}

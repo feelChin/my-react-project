@@ -1,0 +1,95 @@
+@import '../../styles/util.scss';
+
+.mine {
+    * {
+        font-size: 4vw;
+    }
+
+    .mineList {
+        background: var(--theme-white);
+        color: var(--theme-black);
+        padding: 16vw 0;
+
+        .mineListItem {
+            padding-bottom: 3vw;
+
+            h5 {
+                font-size: 3.467vw;
+                color: var(--theme-gray6);
+                margin-bottom: 3vw;
+                margin-left: 5%;
+            }
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1.8vw 5%;
+                position: relative;
+                @include lineAfter;
+
+                &:nth-child(2) {
+                    @include lineBefore;
+
+                    &:before {
+                        border-top: 1px solid var(--theme-light3);
+                    }
+                }
+
+                &:after {
+                    border-bottom: 1px solid var(--theme-light3);
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        display: inline-block;
+                        margin-right: 3vw;
+                        font-size: 4.8vw;
+                    }
+                }
+
+            }
+
+            .photo {
+                display: flex;
+                padding: 0 5%;
+                justify-content: space-between;
+
+                img {
+                    width: 32%;
+                }
+            }
+        }
+    }
+}
+
+.themeWarning {
+    width: 90%;
+    background: var(--theme-white);
+    color: var(--theme-black);
+
+    .themeWarningTitle {
+        padding: 15vw 5vw;
+        text-align: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+
+        .themeWarningItem {
+            width: calc(50% - .05px);
+            padding: 3vw;
+            text-align: center;
+            background: var(--theme-light3);
+
+            &:first-child {
+                background: var(--vanilla);
+                color: var(--white);
+            }
+        }
+    }
+}

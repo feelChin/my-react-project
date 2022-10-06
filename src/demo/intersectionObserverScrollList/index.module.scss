@@ -1,0 +1,17 @@
+@import "../../styles/util.scss";
+
+.intersectionObserverScrollList {
+  padding: 5% 5vw;
+  color: var(--theme-black);
+  background: var(--theme-light3);
+  .item {
+    padding: 3vw 5vw;
+    margin-bottom: 5vw;
+    background: var(--theme-white);
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}

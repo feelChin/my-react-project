@@ -1,0 +1,53 @@
+@import '../../styles/util.scss';
+
+.mineuserInfo {
+    width: 100%;
+    height: 0%;
+    padding-top: 70%;
+    position: relative;
+    font-size: 4vw;
+    color: var(--theme-black);
+
+    .mineuserInfoWrapper {
+        @include absolute;
+        @include flex;
+        align-items: flex-end;
+
+        .mineuserInfoBox {
+            position: relative;
+
+            .avatarTitle {
+                position: absolute;
+                bottom: 100%;
+                transform: translate(40%, 35%);
+                z-index: -1;
+
+                img {
+                    width: 54%;
+                }
+            }
+
+            .userImg {
+                width: 26.667vw;
+                height: 26.667vw;
+                border-radius: 50%;
+                background: linear-gradient(120deg, rgb(141, 183, 218), rgb(66, 66, 207), rgb(54, 12, 151));
+                margin-bottom: 3vw;
+                @include flex;
+
+                img {
+                    width: 90%;
+                    height: 90%;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            .userName {
+                @include transformMarginLeft;
+                margin-top: 3vw;
+                white-space: nowrap;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import "../../styles/util.scss";
+
+.tableAddAndRemove {
+  height: 100%;
+  background: var(--theme-white);
+  padding: 5vw;
+  .tableAddAndRemoveWrapper {
+    table-layout: fixed;
+    width: 85vw;
+    .rowItem {
+      position: relative;
+      display: flex;
+      &:last-child {
+        .item {
+          border-bottom-color: var(--theme-black);
+        }
+      }
+      .remove {
+        @include transformMarginTop;
+        width: 5vw;
+        height: 5vw;
+        left: 100%;
+        border-radius: 50%;
+        background: var(--red);
+        color: var(--white);
+        margin-left: 2vw;
+      }
+    }
+    .item {
+      border: 1px solid transparent;
+      border-right-color: var(--theme-gray3);
+      border-top-color: var(--theme-gray3);
+      height: 12vw;
+      width: 50%;
+      color: var(--theme-black);
+      @include flex;
+      &:first-child {
+        border-left-color: var(--theme-gray3);
+      }
+      input {
+        height: 12vw;
+        padding: 0 3vw;
+        width: 100%;
+        background: transparent;
+        color: var(--theme-black);
+      }
+    }
+  }
+  .add {
+    background: var(--vanilla);
+    color: var(--white);
+    padding: 2vw 5vw;
+    width: 100%;
+    margin-top: 10vw;
+  }
+}

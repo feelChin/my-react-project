@@ -1,0 +1,86 @@
+{
+  "id": "3593330",
+  "name": "my-react-project",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3868287",
+      "name": "账号权限管理",
+      "font_class": "zhanghaoquanxianguanli",
+      "unicode": "eb68",
+      "unicode_decimal": 60264
+    },
+    {
+      "icon_id": "16480877",
+      "name": "签名",
+      "font_class": "qianming",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "316143",
+      "name": "plane",
+      "font_class": "7",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "3483790",
+      "name": "年龄",
+      "font_class": "nianling",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "14930014",
+      "name": "地点Places1 (2)",
+      "font_class": "didianPlaces12",
+      "unicode": "e6be",
+      "unicode_decimal": 59070
+    },
+    {
+      "icon_id": "5387553",
+      "name": "搜索",
+      "font_class": "sousuo1",
+      "unicode": "eafe",
+      "unicode_decimal": 60158
+    },
+    {
+      "icon_id": "31292006",
+      "name": "箭头-copy-copy",
+      "font_class": "jiantou-copy-copy",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "1517121",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "31292000",
+      "name": "箭头-copy",
+      "font_class": "jiantou-copy",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "31292003",
+      "name": "箭头-copy-copy",
+      "font_class": "jiantou-copy-copy1",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "1270",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+@import "../../styles/util.scss";
+
+.learn {
+  background-color: var(--theme-light9);
+  .learnWrapper {
+    padding: 5vw 5% 18.334vw;
+
+    .item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4vw 5%;
+      font-size: 4vw;
+      background: var(--theme-white);
+      box-shadow: 0 5px 5px var(--theme-light3);
+      border-radius: 1.5vw;
+      margin-bottom: 5vw;
+      @include lineAfter;
+      &:after {
+        border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h5 {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--theme-black);
+      }
+
+      span {
+        margin-left: 4vw;
+        position: relative;
+        padding: 1vw 2vw;
+        display: block;
+
+        color: var(--white);
+        font-size: 3.2vw;
+        border-radius: 2.333vw;
+
+        &.titleComponent {
+          background: var(--cyan);
+        }
+        &.titleVanilla {
+          background: var(--vanilla);
+        }
+
+        b {
+          opacity: 0;
+          line-height: 1;
+        }
+
+        small {
+          @include transformMargin;
+          top: 45%;
+        }
+      }
+    }
+  }
+}

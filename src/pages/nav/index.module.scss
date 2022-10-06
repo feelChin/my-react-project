@@ -1,0 +1,24 @@
+.navList {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 13.334vw;
+  display: flex;
+  width: 100%;
+  background: var(--theme-white);
+  box-shadow: 0 0 0px 1px var(--theme-light3);
+  z-index: 7;
+
+  .item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--theme-black);
+    font-size: 4vw;
+
+    &:global(.active) {
+      color: var(--vanilla);
+    }
+  }
+}

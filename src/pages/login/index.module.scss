@@ -1,0 +1,106 @@
+@import '../../styles/util.scss';
+
+.login {
+    background-color: var(--theme-white);
+
+    * {
+        font-size: 4vw;
+    }
+
+    .loginWrapper {
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .tourist {
+        .touristBox {
+            display: flex;
+            justify-content: space-between;
+            margin: 15vw 0;
+
+            .touristItem {
+                width: 30%;
+                height: 0;
+                padding-top: 30%;
+                position: relative;
+
+                img {
+                    @include absolute;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 3px solid transparent;
+                    transition: all .3s;
+
+                    &:global(.active) {
+                        border-color: var(--vanilla);
+                    }
+                }
+            }
+        }
+
+        input {
+            background: var(--theme-light3);
+            width: 100%;
+            height: 12vw;
+            padding: 0 5%;
+            text-align: center;
+            font-size: 4.533vw;
+            color: var(--theme-black);
+            border-radius: 12vw;
+        }
+    }
+
+    button {
+        margin-top: 15vw;
+        width: 100%;
+        height: 13.333vw;
+        color: var(--white);
+        background: var(--red);
+    }
+
+    .loginHead {
+        position: relative;
+        background: var(--red);
+        color: var(--white);
+        height: 13.333vw;
+        @include flex;
+
+        i {
+            @include transformMarginTop;
+            left: 5%;
+            font-size: 5vw;
+        }
+    }
+
+    .loginBox {
+        margin-top: 5vw;
+        display: flex;
+        justify-content: space-between;
+
+        .item {
+            width: 50%;
+            background: var(--theme-gray9);
+            color: var(--theme-white);
+
+            &:global(.active) {
+                background: var(--vanilla);
+                color: var(--white);
+            }
+
+            &:first-child {
+                border-top-left-radius: 4vw;
+            }
+
+            &:last-child {
+                border-top-right-radius: 4vw;
+            }
+
+            p {
+                @include flex;
+
+                padding: 2vw 0;
+            }
+        }
+    }
+
+}
