@@ -48,6 +48,9 @@
         &.titleVanilla {
           background: var(--vanilla);
         }
+        &.titleDemo {
+          background: var(--yellow);
+        }
 
         b {
           opacity: 0;

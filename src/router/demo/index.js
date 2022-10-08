@@ -39,5 +39,9 @@ const demo_router = [
     path: "/portal",
     element: () => import("../../demo/portal"),
   },
+  {
+    path: "/shoppingCart",
+    element: () => import("../../demo/shoppingCart"),
+  },
 ];
 export default demo_router;

@@ -45,7 +45,7 @@
         {
             "id": 8,
             "name": "🐏了个羊小游戏模拟",
-            "type": "Component",
+            "type": "Demo",
             "url": "theQuest"
         },
         {
@@ -59,6 +59,12 @@
             "name": "使用React Portal实现弹窗功能",
             "type": "Component",
             "url": "portal"
+        },
+        {
+            "id": 10,
+            "name": "使用Reducer实现购物车功能",
+            "type": "Demo",
+            "url": "shoppingCart"
         }
     ]
 }
