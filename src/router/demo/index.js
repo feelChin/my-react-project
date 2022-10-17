@@ -43,5 +43,13 @@ const demo_router = [
     path: "/shoppingCart",
     element: () => import("../../demo/shoppingCart"),
   },
+  {
+    path: "/tree",
+    element: () => import("../../demo/tree"),
+  },
+  {
+    path: "/imgContrast",
+    element: () => import("../../demo/imgContrast"),
+  },
 ];
 export default demo_router;

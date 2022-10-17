@@ -13,8 +13,10 @@ function Learn() {
   useEffect(() => {
     async function getLearnListFC() {
       const res = await getLearnList();
-      setList(res.data);
-      setinitList(res.data);
+      const data = res.data.reverse();
+
+      setList(data);
+      setinitList(data);
     }
     getLearnListFC();
   }, []);

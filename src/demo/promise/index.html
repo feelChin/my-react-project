@@ -1,0 +1,64 @@
+<script>
+    function Promise(executor) {
+        this.PromiseState = 'pendding'
+        this.PromiseResult = null
+        this.callback = {}
+
+        const that = this
+
+        function resolve(data) {
+            if (that.PromiseState !== 'pendding') return
+            that.PromiseState = 'fulfilled'
+            that.PromiseResult = data
+
+            if (that.callback.onResolved) {
+                that.callback.onResolved(data)
+            }
+        }
+        function reject(data) {
+            if (that.PromiseState !== 'pendding') return
+            that.PromiseState = 'rejected'
+            that.PromiseResult = data
+
+            if (that.callback.onRejected) {
+                that.callback.onRejected(data)
+            }
+        }
+
+        try {
+            executor(resolve, reject);
+        } catch (e) {
+            reject(e)
+        }
+    }
+
+    Promise.prototype.then = function (onResolved, onRejected) {
+        if (this.PromiseState === 'pendding') {
+            this.callback = {
+                onResolved,
+                onRejected
+            }
+        }
+        if (this.PromiseState === 'fulfilled') {
+            onResolved(this.PromiseResult)
+        }
+        if (this.PromiseState === 'rejected') {
+            onRejected(this.PromiseResult)
+        }
+    };
+
+    p = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('ok')
+        }, 100);
+    });
+
+
+    p.then(value => {
+        console.log(value)
+    }, reason => {
+        console.warn(reason);
+    })
+
+    console.log(p)
+</script>

@@ -65,6 +65,18 @@
             "name": "使用Reducer实现购物车功能",
             "type": "Demo",
             "url": "shoppingCart"
+        },
+        {
+            "id": 11,
+            "name": "Tree组件实现增加删除修改插入功能",
+            "type": "Component",
+            "url": "tree"
+        },
+        {
+            "id": 12,
+            "name": "图片对比器",
+            "type": "Demo",
+            "url": "imgContrast"
         }
     ]
 }
