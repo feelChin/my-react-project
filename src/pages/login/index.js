@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getMinePicture } from "../../http/mine/index.js";
 import { useNavigate, useLocation } from "react-router-dom";
 import userContext from "../../utils/useRootContext/userContext";
+import useTitle from "../../hooks/useTitle";
 import Head from "../../components/head";
 import style from "./index.module.scss";
 
@@ -9,6 +10,8 @@ function Login() {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname;
+
+  useTitle("登录");
 
   const rootProvider = userContext();
   const { signin } = rootProvider;

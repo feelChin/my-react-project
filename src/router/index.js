@@ -26,7 +26,6 @@ function LazyElement(props) {
       ) : (
         <LazyComponent />
       )}
-      {/* <LazyComponent /> */}
     </Suspense>
   );
 }

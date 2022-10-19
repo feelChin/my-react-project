@@ -2,16 +2,19 @@ import { useState, useRef } from "react";
 import useDebounce from "../../hooks/useDebounce";
 import style from "./index.module.scss";
 
-let inputValue;
 function Index(props) {
   const { value, setValue } = props;
   const inputRef = useRef();
-  const runSearch = useDebounce(changeValue, 500);
-
+  const [inputValue,setInputValue] = useState('')
   const [showModal, setShowModal] = useState(false);
 
-  function changeValue() {
-    setValue(inputValue);
+   useDebounce(() => {
+    changeValue(inputValue)
+  }, 300, [inputValue])
+
+
+  function changeValue(value) {
+    setValue(value);
   }
 
   function deleteValue() {
@@ -30,8 +33,7 @@ function Index(props) {
           type="text"
           ref={inputRef}
           onChange={(e) => {
-            inputValue = e.target.value;
-            runSearch();
+            setInputValue(e.target.value);
           }}
         />
         {value && (

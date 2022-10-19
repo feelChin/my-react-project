@@ -86,7 +86,7 @@ class MyCustomTreeNode {
       });
       parent.children.splice(index + 1, 0, {
         value: "自定义标题",
-        parentId: parent.children.code,
+        parentId: parent.code,
         code: new Date().getTime(),
       });
       parent.children.forEach((item, index) => {
